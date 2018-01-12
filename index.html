@@ -2,20 +2,20 @@
 <html>
 <head>
     <title>03.05 - Keyboard controls</title>
-    <script src="../libs/three.js"></script>
-    <script src="../libs/dat.gui.min.js"></script>
-    <script src="../libs/stats.min.js"></script>
+    <script src="./libs/three.js"></script>
+    <script src="./libs/dat.gui.min.js"></script>
+    <script src="./libs/stats.min.js"></script>
     <!--// load the maze related scripts-->
     <!--// based on: http://felipecsl.com/random-maze-generator/-->
-    <script src="../libs/maze/array.js"></script>
-    <script src="../libs/maze/cell.js"></script>
-    <script src="../libs/maze/graph.js"></script>
-    <script src="../libs/maze/maze.js"></script>
-    <script src="../libs/maze/mazeGenerator.js"></script>
-    <script src="../libs/maze/underscore-min.js"></script>
-    <script src="../libs/tween.js"></script>
-    <script src="../libs/TrackballControls.js"></script>
-    <script src="../libs/JSONLoader.js"></script>
+    <script src="./libs/maze/array.js"></script>
+    <script src="./libs/maze/cell.js"></script>
+    <script src="./libs/maze/graph.js"></script>
+    <script src="./libs/maze/maze.js"></script>
+    <script src="./libs/maze/mazeGenerator.js"></script>
+    <script src="./libs/maze/underscore-min.js"></script>
+    <script src="./libs/tween.js"></script>
+    <script src="./libs/TrackballControls.js"></script>
+    <script src="./libs/JSONLoader.js"></script>
 
     <style>
         body {
@@ -46,7 +46,7 @@ var width = 150;
 
 function createCube() {
   var loader = new THREE.JSONLoader();
-  loader.load("../haun/kavy.blend.js",
+  loader.load("./haun/kavy.blend.js",
   function(model) {
       var material = new THREE.MeshNormalMaterial();
 
@@ -126,7 +126,7 @@ function init() {
     // create the ground plane
     var planeGeometry = new THREE.PlaneGeometry(width, width, 40, 40);
     var planeMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-    planeMaterial.map = THREE.ImageUtils.loadTexture("../assets/textures/wood_1-1024x1024.png")
+    planeMaterial.map = THREE.ImageUtils.loadTexture("./textures/wood_1-1024x1024.png")
     planeMaterial.map.wrapS = planeMaterial.map.wrapT = THREE.RepeatWrapping;
     planeMaterial.map.repeat.set( 4, 4 );
     var plane = new THREE.Mesh(planeGeometry, planeMaterial);
